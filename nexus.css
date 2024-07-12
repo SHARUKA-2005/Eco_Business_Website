@@ -1,0 +1,87 @@
+body{
+    background-image: url('./eco-bg.png');
+    background-size: cover; /* Adjusts the size to cover the entire element */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+
+    font-family: 'josefin-sans',sans-serif;
+    color: azure;
+}
+
+/*.container{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20px;
+    background-color: darkblue;
+    height: 5%;
+    width: 100%;
+}*/
+.nav{
+    border-radius: 25px;
+}
+
+.nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.nav .shop h1, .nav .shop h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.nav .shop h1 {
+    font-size: 24px;
+}
+
+.nav .shop h2 {
+    font-size: 16px;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav li h2 {
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.nav li h2:hover {
+    background-color: #111;
+    cursor: pointer;
+}
+
+.main{
+    
+    width: 50%;
+}
+
+#view-products{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#view-products:hover {
+    background-color: rgb(7, 249, 11); /* Optional: darker shade for hover effect */
+}
