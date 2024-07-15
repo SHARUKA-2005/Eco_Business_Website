@@ -1,22 +1,23 @@
-body{
-    background-image: url('./eco-bg.png');
-    background-size: cover; /* Adjusts the size to cover the entire element */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-
-    font-family: 'josefin-sans',sans-serif;
+/*body {
+    font-family: 'Josefin Sans', sans-serif;
     color: azure;
+    margin: 0;
+    padding: 0;
 }
 
-/*.container{
+.firstpg {
+    background-image: url('./eco-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; // Ensure it takes the full viewport height //
     display: flex;
     flex-direction: column;
-    flex-basis: 20px;
-    background-color: darkblue;
-    height: 5%;
-    width: 100%;
-}*/
-.nav{
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
     border-radius: 25px;
 }
 
@@ -27,6 +28,7 @@ body{
     padding: 20px;
     background-color: #333;
     color: white;
+    width: 100%;
 }
 
 .nav .shop h1, .nav .shop h2 {
@@ -67,12 +69,12 @@ body{
     cursor: pointer;
 }
 
-.main{
-    
+.main {
     width: 50%;
+    text-align: center;
 }
 
-#view-products{
+button {
     background-color: blue;
     color: white;
     border: none;
@@ -82,6 +84,217 @@ body{
     cursor: pointer;
 }
 
-#view-products:hover {
-    background-color: rgb(7, 249, 11); /* Optional: darker shade for hover effect */
+button:hover {
+    background-color: rgb(7, 249, 11);
+}
+
+.aboutuspg {
+    background-image: url('./about-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; // Ensure it takes the full viewport height //
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutuspg .heading {
+    margin-bottom: 20px;
+}
+
+.aboutuspg .story {
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); // Add some background to make text more readable //
+    border-radius: 10px;
+}*/
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    color: azure;
+    margin: 0;
+    padding: 0;
+}
+
+.firstpg {
+    background-image: url('./eco-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ensure it takes the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:left;
+}
+
+.nav {
+    border-radius: 25px;
+}
+
+.nav.container {
+    position: fixed; /* Make the navbar fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.nav .shop h1, .nav .shop h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.nav .shop h1 {
+    font-size: 24px;
+}
+
+.nav .shop h2 {
+    font-size: 16px;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav li h2 {
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.nav li h2:hover {
+    background-color: #111;
+    cursor: pointer;
+}
+
+.main {
+    width: 50%;
+    text-align:left;
+    text-decoration: wavy;
+    font-weight: bolder;
+    color: black;
+    font-size:35px;
+    margin-top: 100px; /* Add some margin to avoid content being hidden behind the fixed navbar */
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(7, 249, 11);
+}
+
+.aboutuspg {
+    background-image: url('./about-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ensure it takes the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-end;
+    margin-top: 100px; /* Add some margin to avoid content being hidden behind the fixed navbar */
+}
+
+.aboutuspg .heading {
+    
+    color:rgb(35, 14, 229);
+    margin-bottom: 20px;
+    font-size: larger;
+}
+
+.aboutuspg .story {
+    color: rgb(7, 14, 0);
+    max-width: 800px;
+    padding: 20px;
+    font-size: 25px;
+    font-stretch: expanded;
+    font-weight: bold;
+}
+
+
+.carousel-container {
+    position:absolute;
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+form {
+    display: block;
+    margin-top: 0em;
+    unicode-bidi: isolate;
+}
+
+label{
+    color: black;
 }
