@@ -211,7 +211,7 @@ button:hover {
 }
 
 .aboutuspg {
-    background-image: url('./about-bg.png');
+    background-image: url('./abt-bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -219,29 +219,31 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:flex-end;
+    align-items:center;
     margin-top: 100px; /* Add some margin to avoid content being hidden behind the fixed navbar */
 }
 
 .aboutuspg .heading {
     
-    color:rgb(35, 14, 229);
+    color:rgb(130, 48, 12);
     margin-bottom: 20px;
     font-size: larger;
 }
 
 .aboutuspg .story {
-    color: rgb(7, 14, 0);
+    color: rgba(122, 22, 0, 0.897);
     max-width: 800px;
     padding: 20px;
     font-size: 25px;
     font-stretch: expanded;
     font-weight: bold;
+    word-spacing: 10px;
 }
 
 
 .carousel-container {
-    position:absolute;
+    margin-top: 100px;
+    position:relative;
     width: 100%;
     max-width: 800px;
     overflow: hidden;
@@ -251,6 +253,8 @@ button:hover {
 
 .carousel {
     display: flex;
+    justify-content: center;
+    align-items:center;
     transition: transform 0.5s ease;
 }
 
@@ -298,3 +302,4 @@ form {
 label{
     color: black;
 }
+

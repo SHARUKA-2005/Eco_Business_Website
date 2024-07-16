@@ -9,17 +9,24 @@
 </head>
 <body>
 
-    <form>
+    <form id="contactForm" method="POST">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+        <input type="hidden" name="_captcha" value="false">
         <img class="mb-4" src="./icon.png" alt="" width="72" height="57">
         <h1 class="h3 mb-3 fw-normal" color="black">Contact us</h1>
     
         <div class="form-floating">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-          <label for="floatingInput">Email address</label>
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" required>
+            <label for="floatingInput">Email address</label>
         </div>
         <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-          <label for="floatingPassword">Password</label>
+            <input type="text" class="form-control" id="floatingName" placeholder="Your Name" name="name" required>
+            <label for="floatingName">Your Name</label>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" id="floatingMessage" placeholder="Your Message" name="message" required></textarea>
+            <label for="floatingMessage">Your Message</label>
         </div>
     
         <div class="form-check text-start my-3">
@@ -28,12 +35,18 @@
             Remember me
           </label>
         </div>
-        <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+        <button class="btn btn-primary w-100 py-2" type="submit">Send</button>
         <p class="mt-5 mb-3 text-body-secondary">©2024</p>
-      </form>
+    </form>
 
-
-      <script src="./nexus.js" charset="UTF-8"></script>
-    
+    <script src="./nexus.js" charset="UTF-8"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var email = document.getElementById('floatingInput').value;
+            this.action = 'https://formsubmit.co/' + encodeURIComponent(email);
+            this.submit();
+        });
+    </script>
 </body>
 </html>
